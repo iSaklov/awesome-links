@@ -2,9 +2,8 @@ import React from 'react'
 import { type SubmitHandler, useForm } from 'react-hook-form'
 import { gql, useMutation } from '@apollo/client'
 import toast, { Toaster } from 'react-hot-toast'
-import { getSession } from '@auth0/nextjs-auth0'
-import prisma from '../lib/prisma'
 import type { GetServerSideProps } from 'next'
+import { getSession } from '@auth0/nextjs-auth0'
 
 type FormValues = {
 	title: string
@@ -15,7 +14,7 @@ type FormValues = {
 }
 
 const CreateLinkMutation = gql`
-	mutation createLink(
+	mutation (
 		$title: String!
 		$url: String!
 		$imageUrl: String!
