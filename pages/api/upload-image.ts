@@ -5,13 +5,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 	try {
 		const s3 = new aws.S3({
 			accessKeyId: process.env.APP_AWS_ACCESS_KEY,
-			secretAccessKey: process.env.APP_AWS_SECRET_KEY,
+			secretAccessKey: process.env.APP_AWS_SECRET_ACCESS_KEY,
 			region: process.env.APP_AWS_REGION,
 		})
 
 		aws.config.update({
 			accessKeyId: process.env.APP_AWS_ACCESS_KEY,
-			secretAccessKey: process.env.APP_AWS_SECRET_KEY,
+			secretAccessKey: process.env.APP_AWS_SECRET_ACCESS_KEY,
 			region: process.env.APP_AWS_REGION,
 			signatureVersion: 'v4',
 		})
