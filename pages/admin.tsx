@@ -145,7 +145,6 @@ const Admin = () => {
 						name='image'
 					/>
 				</label>
-
 				<button
 					disabled={loading}
 					type='submit'
