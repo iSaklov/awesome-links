@@ -1,16 +1,18 @@
-import React from "react";
-import Header from "./Header";
+import React from 'react'
+import CustomHead from './CustomHead'
+import Header from './Header'
 
 interface Props {
-  children: React.ReactNode
+	children: React.ReactNode
 }
 const Layout: React.FC<Props> = ({ children }) => {
-  return (
-    <div>
-      <Header />
-      {children}
-    </div>
-  );
-};
+	return (
+		<>
+			<CustomHead />
+			<Header />
+			{children}
+		</>
+	)
+}
 
-export default Layout;
+export default Layout
